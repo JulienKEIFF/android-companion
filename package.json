@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@devicefarmer/adbkit": "^3.2.3",
-    "@mdi/font": "5.9.55",
+    "@mdi/font": "7.0.96",
     "axios": "^0.27.2",
     "element-plus": "^2.2.8",
     "node": "^16.13.2",
