@@ -25,10 +25,8 @@
 		<el-icon><ArrowUpBold /></el-icon>
 	</el-card>
 
-{{folderList}}
-<div v-for="folder in folderList">{{folder.name}}</div>
-	<folder v-for="(folder, i) in folderList" :key="i" :file="folder" :fullpath='folderpath' :device="props.device" @click="navigate(false, folder.name)" />
-	<file  v-for="(file, i) in fileList" :key="i" :file="file" :fullpath='folderpath' :device="props.device" />
+	<folder v-for="folder in folderList" :file="folder" :fullpath='folderpath' :device="props.device" @click="navigate(false, folder.name)" />
+	<file  v-for="file in fileList" :file="file" :fullpath='folderpath' :device="props.device" />
 </template>
 
 <script lang="ts" setup>
