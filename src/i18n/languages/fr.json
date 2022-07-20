@@ -1,0 +1,66 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "devices": "Appareils",
+    "settings": "Paramètres",
+    "refreshlist": "Rafraichir"
+  },
+  "modules": {
+    "apps": "Applications installées",
+    "logs": "Logs",
+    "fs": "Explorateur de fichier"
+  },
+  "applist": {
+    "labels": {
+      "packages": "ID du paquet",
+      "appname": "Nom de l'application",
+      "action": "Actions"
+    },
+    "buttons": {
+      "launch": "Lancer",
+      "stop": "Stopper"
+    },
+    "nodata": "Pas de résultats"
+  },
+  "filesystem": {
+    "search": "Rechercher un fichier (sensible à la casse)"
+  },
+  "commands": {
+    "poweroff": "Eteindre",
+    "reboot": "Redémarer",
+    "screenmirror": "Lancer SCRCPY"
+  },
+  "settings": {
+    "title": "Paramètres de l'application",
+    "system": {
+      "title": "Paramètres systèmes",
+      "locale": "Langue",
+      "screenshotlocation": "Dossier des captures d'écrans",
+      "filelocation": "Dossier des fichiers"
+    },
+    "infos": {
+      "title": "Informations de l'application",
+      "version": "Version",
+      "codename": "Nom de code",
+      "copyright": "Droit d'auteur"
+    }
+  },
+  "debuglvl": {
+    "verbose": "Verbeux",
+    "debug": "Deboguage",
+    "info": "Information",
+    "warning": "Alerte",
+    "error": "Erreur"
+  },
+  "state": {
+    "logging": "En cours de logging"
+  },
+  "notifications": {
+    "malformedConnectionTitle": "Format de l'url de connection malformé",
+    "malformedConnectionDescription": "L'url de connection ADB doit être dans le format <ip>:<port> (ex: 192.168.0.52:5555)",
+    "errorConnectionTitle": "Impossible de connecter l'appareil",
+    "errorConnectionDescription": "Vérifier que l'appareil est en ligne et que l'url de connection soit correct",
+    "successConnectionTitle": "L'appareil est bien connecter",
+    "successConnectionDescription": "L'appareil est disponible dans le menu déroulant"
+  }
+}
