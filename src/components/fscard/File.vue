@@ -70,8 +70,8 @@ const openFile = async () => {
 	console.log('heya')
 	const requestedFilePath = props.fullpath.join('') + '/' +  props.file.name
 
-	await api.android.filesystem.pullFileFromDevice(props.device, requestedFilePath, 'C:/Users/jkeif/OneDrive/Bureau/adb_manipulator/toto.txt')
-	api.node.openFileDefault('C:/Users/jkeif/OneDrive/Bureau/adb_manipulator/toto.txt')
+	await api.android.filesystem.pullFileFromDevice(props.device, requestedFilePath, './storage/' + props.file.name)
+	api.node.openFileDefault('./storage/' + props.file.name)
 }
 
 const notify = (title: string, description: string) => {
