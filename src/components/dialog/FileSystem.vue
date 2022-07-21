@@ -25,8 +25,8 @@
 		<el-icon><ArrowUpBold /></el-icon>
 	</el-card>
 
-	<folder v-for="folder in folderList" :file="folder" :fullpath='folderpath' :device="props.device" @click="navigate(false, folder.name)" />
-	<file  v-for="file in fileList" :file="file" :fullpath='folderpath' :device="props.device" />
+	<Folder v-for="folder in folderList" :file="folder" :fullpath='folderpath' :device="props.device" @click="navigate(false, folder.name)" />
+	<File  v-for="file in fileList" :file="file" :fullpath='folderpath' :device="props.device" />
 </template>
 
 <script lang="ts" setup>
@@ -35,8 +35,8 @@ import { defineProps, onMounted, ref, reactive, Ref } from 'vue'
 import { ArrowRight, Search } from '@element-plus/icons-vue'
 import { api } from '../../electron'
 
-import folder from '../filesystem/folder.vue'
-import file from '../filesystem/file.vue'
+import Folder from '../fscard/Folder.vue'
+import File from '../fscard/File.vue'
 import { IFileSystem } from '../../typings/IFileSystem'
 
 
