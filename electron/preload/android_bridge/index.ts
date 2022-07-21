@@ -9,6 +9,10 @@ let logcat;
 
 //region Filesystem
 async function pullFileFromDevice(requestedDevice: string, fromPath: string, destPath: string) {
+	const folderPath = destPath.split('/')
+	folderPath.pop()
+	fs.mkdirSync(folderPath.join('/'), { recursive: true })
+	
 	const device = client.getDevice(requestedDevice)
 	const syncInstance = await device.syncService()
 	const fileStream = syncInstance.pull(fromPath)
