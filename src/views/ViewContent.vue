@@ -35,6 +35,18 @@
 				</el-dialog>
 			</el-col>
 		</el-row>
+
+		<el-row :gutter="12" class="mt-4">
+			<el-col :span="8">
+				<el-card shadow="hover" @click="infosDialog = !infosDialog" :body-style="{display: 'flex', alignItems: 'center'}">
+					<el-icon :size="20" class="mr-2"><InfoFilled /></el-icon> 
+					<span>{{ $t('modules.infos') }}</span>
+				</el-card>
+				<el-dialog v-model="infosDialog" v-if="infosDialog" :title="$t('modules.infos')" width="95%">
+					<DeviceInfos :device="props.device" />
+				</el-dialog>
+			</el-col>
+		</el-row>
 	</div>
 
 	<div v-else class="flex flex-col items-center">
@@ -53,9 +65,11 @@
 <script lang="ts" setup>
 import { defineProps, defineEmits, ref } from 'vue'
 import { ElNotification } from 'element-plus'
-import DevicePackage from '../components/dialog/DevicePackages.vue';
-import LogViewer from '../components/dialog/LogViewer.vue';
-import FileSystem from '../components/dialog/FileSystem.vue';
+
+import DevicePackage from '../components/dialog/DevicePackages.vue'
+import LogViewer from '../components/dialog/LogViewer.vue'
+import FileSystem from '../components/dialog/FileSystem.vue'
+import DeviceInfos from '../components/dialog/DeviceInfos.vue'
 
 import States from '../components/controllers/States.vue';
 import SystemRessources from '../components/controllers/SystemInfos.vue'
@@ -69,6 +83,7 @@ const activeName = ref('0')
 const packageDialog = ref(false)
 const logsDialog 		= ref(false)
 const filesysDialog	= ref(false)
+const infosDialog		= ref(false)
 
 const props = defineProps(['device'])
 const emit = defineEmits(['connect'])

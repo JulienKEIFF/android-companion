@@ -1,5 +1,5 @@
 import { IPackageType } from '../../../src/IPackageType'
-import Adb from '@devicefarmer/adbkit';
+import Adb, { Properties } from '@devicefarmer/adbkit';
 import Logcat from '@devicefarmer/adbkit-logcat'
 import fs from 'fs';
 
@@ -62,7 +62,7 @@ async function stopLogcat() {
 //region Device
 async function getDevices() { return await client.listDevices(); }
 
-async function getDeviceInfo(device: string) {
+async function getDeviceInfo(device: string): Promise<Properties> {
 	const realDevice = client.getDevice(device)
 	return await realDevice.getProperties()
 }

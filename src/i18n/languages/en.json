@@ -8,7 +8,8 @@
   "modules": {
     "apps": "Installed apps",
     "logs": "Logs",
-    "fs": "File Explorer"
+    "fs": "File Explorer",
+    "infos": "Device Informations"
   },
   "applist": {
     "packagetype": {
