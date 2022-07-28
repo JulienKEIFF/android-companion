@@ -11,6 +11,12 @@
     "fs": "File Explorer"
   },
   "applist": {
+    "packagetype": {
+      "system": "System",
+      "enabled": "Active app",
+      "disabled": "Disabled app",
+      "third": "Third party app"
+    },
     "nodata": "No results",
     "labels": {
       "packages": "Package ID",

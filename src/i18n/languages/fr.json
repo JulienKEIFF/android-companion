@@ -11,6 +11,12 @@
     "fs": "Explorateur de fichier"
   },
   "applist": {
+    "packagetype": {
+      "system": "Système",
+      "enabled": "Application active",
+      "disabled": "Application désactiver",
+      "third": "Application tièrce"
+    },
     "labels": {
       "packages": "ID du paquet",
       "appname": "Nom de l'application",
