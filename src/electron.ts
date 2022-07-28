@@ -3,7 +3,7 @@
  * The purpose of this is to get static analysis in Vue files without additional plug-ins.
  */
 import { IPackageType } from './IPackageType'
-import { Device, DeviceClient, Properties } from '@devicefarmer/adbkit';
+import { Device, DeviceClient, Features, Properties } from '@devicefarmer/adbkit';
 import { IpcRenderer } from 'electron'
 import Entry from '@devicefarmer/adbkit/dist/src/adb/sync/entry';
 
@@ -42,7 +42,7 @@ export interface IAndroidBridge {
 		getDevices(): Promise<Device[]>,
 		getDeviceInfo(device: string): Promise<Properties>,
 		getInstalledPackages(device: string, typeOfPackage: IPackageType): Promise<string[]>,
-		getDeviceFeatures(): void,
+		getDeviceFeatures(device: string): Promise<Features>
 		checkPackageInstalled(device: string, androidPackage: string): Promise<boolean>,
 	}
 }

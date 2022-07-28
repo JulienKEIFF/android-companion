@@ -8,7 +8,9 @@
   "modules": {
     "apps": "Applications installées",
     "logs": "Logs",
-    "fs": "Explorateur de fichier"
+    "fs": "Explorateur de fichier",
+    "features": "Module de l'appareil",
+    "infos": "Informations de l'appareil"
   },
   "applist": {
     "packagetype": {
@@ -30,6 +32,11 @@
   },
   "filesystem": {
     "search": "Rechercher un fichier (sensible à la casse)"
+  },
+  "infoslist": {
+    "nodata": "Impossible de trouver les informations de l'appareil",
+    "info": "Type d'information",
+    "value": "Valeur"
   },
   "commands": {
     "poweroff": "Eteindre",
