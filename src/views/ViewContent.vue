@@ -37,6 +37,16 @@
 		</el-row>
 
 		<el-row :gutter="12" class="mt-4">
+		<el-col :span="8">
+				<el-card shadow="hover" @click="infosFeature = !infosFeature" :body-style="{display: 'flex', alignItems: 'center'}">
+					<el-icon :size="20" class="mr-2"><Connection /></el-icon> 
+					<span>{{ $t('modules.features') }}</span>
+				</el-card>
+				<el-dialog v-model="infosFeature" v-if="infosFeature" :title="$t('modules.features')" width="95%">
+					<DeviceFeatures :device="props.device" />
+				</el-dialog>
+			</el-col>
+
 			<el-col :span="8">
 				<el-card shadow="hover" @click="infosDialog = !infosDialog" :body-style="{display: 'flex', alignItems: 'center'}">
 					<el-icon :size="20" class="mr-2"><InfoFilled /></el-icon> 
@@ -69,6 +79,7 @@ import { ElNotification } from 'element-plus'
 import DevicePackage from '../components/dialog/DevicePackages.vue'
 import LogViewer from '../components/dialog/LogViewer.vue'
 import FileSystem from '../components/dialog/FileSystem.vue'
+import DeviceFeatures from '../components/dialog/DeviceFeatures.vue'
 import DeviceInfos from '../components/dialog/DeviceInfos.vue'
 
 import States from '../components/controllers/States.vue';
@@ -83,6 +94,7 @@ const activeName = ref('0')
 const packageDialog = ref(false)
 const logsDialog 		= ref(false)
 const filesysDialog	= ref(false)
+const infosFeature	= ref(false)
 const infosDialog		= ref(false)
 
 const props = defineProps(['device'])

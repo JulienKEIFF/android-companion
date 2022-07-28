@@ -9,6 +9,7 @@
     "apps": "Applications installées",
     "logs": "Logs",
     "fs": "Explorateur de fichier",
+    "features": "Module de l'appareil",
     "infos": "Informations de l'appareil"
   },
   "applist": {
