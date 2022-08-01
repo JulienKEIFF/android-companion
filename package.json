@@ -22,7 +22,7 @@
     "roboto-fontface": "*",
     "tailwind-scrollbar": "^1.3.1",
     "vue-i18n": "9",
-    "vuetify": "^3.0.0-beta.0",
+    "vuetify": "^3.0.0-beta.6",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
